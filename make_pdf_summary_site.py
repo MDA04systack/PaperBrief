@@ -1,14 +1,14 @@
 import os # 파이썬 코드와 기본 운영 체제 사이의 다리 역할하는 라이브러리
-from PyPDF2 import PdfReader # PDF 파일에서 텍스트를 추출하는 라이브러리
-import streamlit as st
-# langchain 대규모 언어 모델(LLM)을 효율적으로 다루기 위한 프레임워크
+from PyPDF2 import PdfReader # PDF 파일에서 텍스트를 추출하는 라이브러리(v3.0.1)
+import streamlit as st # streamlit(v1.29.0)
+# langchain 대규모 언어 모델(LLM)을 효율적으로 다루기 위한 프레임워크(v0.3.27)
 from langchain.text_splitter import CharacterTextSplitter # 긴 텍스트를 잘게 나누는 도구
 from langchain_openai import OpenAIEmbeddings # 텍스트의 의미를 추출하여 수치화(Vector)하는 도구 (AI가 내용을 비교/검색할 때 사용)
 from langchain_openai import ChatOpenAI # OpenAI의 GPT 모델을 연결하여 대화나 요약 같은 실제 답변을 생성하는 엔진
 from langchain_community.vectorstores import FAISS # 텍스트를 벡터로 변환하여 저장하고 검색하는 벡터 데이터베이스
 from langchain.chains.question_answering import load_qa_chain # 여러 개의 문서 조각(chunks) 중에서 질문과 관련된 내용을 참조하여 답변을 생성하도록 하는 '연결 고리(Chain)'
 from langchain_community.callbacks import get_openai_callback # OpenAI API를 사용할 때 발생하는 토큰 사용량과 비용을 실시간으로 추적하는 도구
-import openai  # 키 유효성 검사를 위해 추가, OpenAI 공식 파이썬 라이브러리
+import openai  # 키 유효성 검사를 위해 추가, OpenAI 공식 파이썬 라이브러리(v2.15.0)
 
 # API 키 유효성 검사 함수
 def check_api_key(api_key):
@@ -35,7 +35,7 @@ def process_text(text, api_key):
 # 웹 UI 구현
 def main(): 
     # 웹 브라우저 탭의 이름과 메인 화면의 제목 설정
-    st.set_page_config(page_title="논문 초록 요약기", page_icon="📄")
+    st.set_page_config(page_title="박수연의 논문 초록 요약기", page_icon="📄")
     st.title("📄 박수연의 논문 초록 요약 서비스")
     st.divider()
 
