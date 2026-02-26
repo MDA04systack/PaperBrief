@@ -1,6 +1,6 @@
 # 📄 박수연의 논문 초록 요약 서비스 (PaperBrief)
 
-![Streamlit]([https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=Streamlit&logoColor=white](https://paperbrief-mda04systack.streamlit.app/))
+
 ## 1. 프로젝트의 주요 기능과 목적, 접속 링크
 
 **목적:**  
@@ -85,4 +85,5 @@ streamlit run make_pdf_summary_site.py
   - `gpt-3.5-turbo-16k` 및 `Langchain`을 활용한 내용 요약 시스템 구성
   - 비용 계산 및 UI 인터페이스 추가
   - Streamlit Cloud 환경 구성
+
 
