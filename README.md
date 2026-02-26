@@ -1,2 +1,2 @@
-# PaperBrief
+# PaperBrief - 박수연의 논문 초록 요약 서비스
 논문 초록 요약 사이트입니다.
